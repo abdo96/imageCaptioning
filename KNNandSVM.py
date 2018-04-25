@@ -1,6 +1,12 @@
 from keras.preprocessing.image import load_img
 from keras.preprocessing.image import img_to_array
 import ast
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn import svm 
+from os import listdir
+
 directory = "../Project_Pattern/classification_dataset/"#change the directory
 dic = open("../Project_Pattern/labels.txt",'r')
 dic_labels = ast.literal_eval(dic.read())
